@@ -3,7 +3,6 @@ package com.simple.simpleBackend.service;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.simple.simpleBackend.model.Product;
@@ -17,9 +16,23 @@ public class ProductService {
         new Product( 102, "Camera", 70000)
     );
     
-    @RequestMapping("/products/get")
-    public List<Product> getProducts(){
+    // @RequestMapping("/products/get")
+    public List<Product> getProductsFromService(){
         return products;
+    }
+
+    public Product getProductByIdFromService(int prodId){
+        // return products.stream()
+        //         .filter(p -> p.getProdId() == prodId)
+        //         .findFirst().get();
+        Product reqProduct = null;
+        for(int i = 0; i < products.size(); i++){
+            if(products.get(i).getProdId() == prodId){
+                reqProduct = products.get(i);
+                break;
+            }
+        }
+        return reqProduct;
     }
 
 }
