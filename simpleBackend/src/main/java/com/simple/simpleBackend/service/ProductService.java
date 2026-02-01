@@ -1,5 +1,6 @@
 package com.simple.simpleBackend.service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,10 +12,10 @@ import com.simple.simpleBackend.model.Product;
 public class ProductService {
 
     // creating in memory dummy data 
-    List<Product> products = Arrays.asList(
+    List<Product> products = new ArrayList<>(Arrays.asList(
         new Product( 101, "Iphone", 50000), 
         new Product( 102, "Camera", 70000)
-    );
+    ));
     
     // @RequestMapping("/products/get")
     public List<Product> getProductsFromService(){
@@ -33,6 +34,10 @@ public class ProductService {
             }
         }
         return reqProduct;
+    }
+
+    public void addProduct(Product product){
+        products.add(product);
     }
 
 }
