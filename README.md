@@ -78,3 +78,6 @@ To do this, we need to add a few dependencies form spring initialzr.
 - Spring web
 - Spring JPA
 - Spring H2 (this is the DB being used in this project)
+
+Add the DB url in application.properties  
+to access the DB, use http://localhost:8080/h2-console
