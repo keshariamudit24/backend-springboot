@@ -31,12 +31,12 @@ public class ProductController {
     }
     
     @PostMapping("/products")
-    public void addProduct(@RequestBody Product product){
+    public void addProduct(@RequestBody Product product){ // we want the data sent by the user to POST in the database. that's why we use RequestBody annotation
         service.addProduct(product);
     }
 
     @PutMapping("/products")
-    public void updateProduct(@RequestBody Product prod){
+    public void updateProduct(@RequestBody Product prod){ // here also we want the data sent by the user to update so we use the RequestBody annotation
         service.updateProduct(prod);
     }
 
