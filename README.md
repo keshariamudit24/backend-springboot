@@ -20,6 +20,7 @@ The most basic way to interact with a database was **JDBC (Java Database Connect
 Connection conn = DriverManager.getConnection(url, user, pass);
 PreparedStatement ps = conn.prepareStatement("SELECT * FROM users");
 ResultSet rs = ps.executeQuery();
+```
 
 # Modern ORM Solutions in Spring Boot Applications
 
