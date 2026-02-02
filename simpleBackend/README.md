@@ -65,6 +65,7 @@ Spring Data JPA is an abstraction over JPA that simplifies data access.
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByEmail(String email);
 }
+```
 
 As we know, springboot applications have 3 parts: 
 - Controllers
